@@ -34,7 +34,7 @@
           data-action="mouseenter->suggestions#removeGlobalSearchResultsDefaultColor mouseleave->suggestions#addGlobalSearchResultsDefaultColor"
           >
             <td class="highlight">
-              <%= @suggestions_presenter.pil_search_description(narrowed_search_result).html_safe %>
+              <%= @suggestions_presenter.pil_search_description(narrowed_search_result) %>
             </td>
             <td class="desktop-only">
               <%= svg_icon(narrowed_search_result.icon_name) %>
