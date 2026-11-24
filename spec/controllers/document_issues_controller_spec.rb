@@ -24,6 +24,7 @@ describe DocumentIssuesController do
       expect(doc_presenter.document_count).to eq(2)
       expect(doc_presenter.agency_count).to eq(2)
       expect(doc_presenter.page_count).to eq(21)
+      expect(doc_presenter.meta_page_title).to eq("Current Federal Register Document Issue")
     end
   end
 end
