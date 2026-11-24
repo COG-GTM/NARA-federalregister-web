@@ -34,7 +34,11 @@ class DocumentIssuesController < ApplicationController
 
     date = DocumentIssue.current.publication_date
     @presenter = TableOfContentsPresenter.new(date)
-    @doc_presenter = DocumentIssuePresenter.new(date, current_issue: true)
+    @doc_presenter = DocumentIssuePresenter.new(
+      date,
+      current_issue: true,
+      documents: @presenter.documents
+    )
 
     render :show
   end
